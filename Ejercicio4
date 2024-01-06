@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class EliminarElementos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int[] arreglo = new int[10];
+
+        System.out.println("Ingrese 10 valores enteros para el arreglo:");
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.print("Elemento " + i + ": ");
+            arreglo[i] = scanner.nextInt();
+        }
+
+        arreglo[2] = -1;
+        arreglo[4] = -1;
+        arreglo[8] = -1;
+        
+        System.out.println("Nuevo arreglo después de eliminar elementos:");
+        for (int i = 0; i < arreglo.length; i++) {
+            if (arreglo[i] != -1) {
+                System.out.println("Elemento " + i + ": " + arreglo[i]);
+            }
+        }
+    }
+}
